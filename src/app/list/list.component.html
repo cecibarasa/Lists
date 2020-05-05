@@ -3,7 +3,7 @@
     <hr>
     <ul>
         <div *ngFor='let list of list; let i = index'>
-            <li appStrikethough>{{list.name}}</li>
+            <li appStrikethrough>{{list.name}}</li>
             <button (click)='toggleDetails(i)'>Toggle Details</button>
             <app-list-detail *ngIf='list.showDescription' [list]='list' (isComplete)='completeList($event,i)'></app-list-detail>
         </div>

@@ -11,7 +11,7 @@ export class ListDetailComponent implements OnInit {
 @Input() list: List;
 @Output() isComplete = new EventEmitter<boolean>();
 
-listComplete(complete:boolean){
+listDelete(complete:boolean){
   this.isComplete.emit(complete);
 }
   constructor() { }
