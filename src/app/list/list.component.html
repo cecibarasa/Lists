@@ -1,0 +1,11 @@
+<div>
+    <h1>My List</h1>
+    <hr>
+    <ul>
+        <li *ngFor='let list of list; let i = index'>
+            {{list.name}}
+            <button (click)='toggleDetails(i)'>Toggle Details</button>
+            <app-list-detail *ngIf='list.showDescription' [list]='list' (isComplete)='completeList($event,i)'></app-list-detail>
+        </li>
+    </ul>
+</div>
