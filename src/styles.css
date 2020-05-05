@@ -1,3 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+.container {
+    background-attachment: fixed;
+    background-image: url("https://images.unsplash.com/photo-1450098722705-562182a09e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    justify-content: center;
+    text-align: center;
+}
