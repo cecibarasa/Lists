@@ -19,11 +19,13 @@ export class ListComponent implements OnInit {
     this.list[index].showDescription = !this.list[index].showDescription;
   }
   deleteList(isComplete, index){
-    let toDelete = confirm(`Are you sure you want to delete ${this.list[index].name}?`)
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.list[index].name}?`)
 
-    if (toDelete) {
+      if (toDelete){
       this.list.splice(index,1);
     }
+  }
   }
   constructor() { }
 

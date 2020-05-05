@@ -1,11 +1,20 @@
-<div>
+<div class="container">
     <h1>My List</h1>
     <hr>
-    <ul>
-        <div *ngFor='let list of list; let i = index'>
-            <li appStrikethrough>{{list.name}}</li>
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-list-detail *ngIf='list.showDescription' [list]='list' (isComplete)='completeList($event,i)'></app-list-detail>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let list of list;let i = index'>
+                <div>
+                    <h4 id={{i}} appStrikethrough>{{list.name}}</h4>
+                    <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+                </div>
+
+                <div *ngIf='list.showDescription'>
+                    <app-list-detail [list]='list' (isComplete)='deleteList($event,i)'></app-list-detail>
+                </div>
+            </div>
         </div>
-    </ul>
+    </div>
+
 </div>
