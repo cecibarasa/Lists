@@ -10,7 +10,7 @@ export class ListFormComponent implements OnInit {
   newList = new List(0,"","",);
   @Output() addList = new EventEmitter<List>();
 
-  submitGoal(){
+  submitList(){
 this.addList.emit(this.newList);
   }
   constructor() { }

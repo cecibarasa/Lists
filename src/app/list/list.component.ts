@@ -27,11 +27,12 @@ export class ListComponent implements OnInit {
     }
   }
   }
-  addNewlist(list){
-    let goalLength = this.list.length;
-    list.id = goalLength+1;
+  addNewList(list){
+    let listLength = this.list.length;
+    list.id = listLength+1;
     this.list.push(list)
   }
+  
   constructor() { }
 
   ngOnInit(): void {
