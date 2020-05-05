@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { List } from '../list';
 
 @Component({
@@ -7,7 +7,12 @@ import { List } from '../list';
   styleUrls: ['./list-form.component.css']
 })
 export class ListFormComponent implements OnInit {
-  newGoal = new List(0,"","",);
+  newList = new List(0,"","",);
+  @Output() addList = new EventEmitter<List>();
+
+  submitGoal(){
+this.addList.emit(this.newList);
+  }
   constructor() { }
 
   ngOnInit(): void {
