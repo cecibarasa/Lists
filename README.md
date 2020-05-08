@@ -1,3 +1,4 @@
+[![codebeat badge](https://codebeat.co/badges/a77a8cb5-a927-40d5-8c1e-fc41abddbff3)](https://codebeat.co/projects/github-com-cecibarasa-lists-master)
 # Lists
 ## By Cecilia Barasa
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
